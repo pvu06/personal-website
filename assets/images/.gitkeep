@@ -1,0 +1,5 @@
+# This file ensures the images directory is tracked by Git
+# Add your images here:
+# - profile-photo.jpg (your profile picture)
+# - project-screenshots/ (screenshots of your projects)
+# - backgrounds/ (background images if needed)

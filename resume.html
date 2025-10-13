@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Phong Vu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Phong Vu</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link active">Resume</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="dark-mode-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Resume</h1>
+                <p class="page-subtitle">My professional experience, education, and skills in detail.</p>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <div class="container">
+                <!-- Resume Download Section -->
+                <div class="resume-download">
+                    <div class="download-card">
+                        <i class="fas fa-download"></i>
+                        <h2>Download Resume</h2>
+                        <p>Get a PDF copy of my resume for your records.</p>
+                        <!-- TODO: Replace with actual resume PDF link -->
+                        <button class="btn btn-primary" onclick="alert('Resume PDF will be available soon! Please contact me directly for now.')">
+                            <i class="fas fa-file-pdf"></i>
+                            Download PDF
+                        </button>
+                        <p class="download-note">
+                            <small>Resume will be uploaded soon. For immediate access, please contact me directly.</small>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Resume Preview Section -->
+                <div class="resume-preview">
+                    <h2>Resume Preview</h2>
+                    
+                    <!-- Contact Information -->
+                    <div class="resume-section-item">
+                        <h3><i class="fas fa-user"></i> Contact Information</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>your-email@example.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/pvu06" target="_blank">github.com/pvu06</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/phongvu06" target="_blank">linkedin.com/in/phongvu06</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="resume-section-item">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h4>Georgia State University</h4>
+                                <span class="education-date">2023 - Present</span>
+                            </div>
+                            <p class="education-degree">Bachelor of Science in Computer Science</p>
+                            <p class="education-status">Sophomore</p>
+                            <!-- TODO: Add GPA, relevant coursework, academic achievements -->
+                            <ul class="education-details">
+                                <li>Expected Graduation: 2027</li>
+                                <li>Relevant Coursework: Data Structures, Algorithms, Programming Fundamentals</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="resume-section-item">
+                        <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Programming Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">HTML/CSS</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Technologies & Tools</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Jupyter Notebook</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Machine Learning</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Areas of Interest</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Artificial Intelligence</span>
+                                    <span class="skill-tag">Web Development</span>
+                                    <span class="skill-tag">Data Science</span>
+                                    <span class="skill-tag">Software Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="resume-section-item">
+                        <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+                        <div class="project-resume-item">
+                            <div class="project-resume-header">
+                                <h4>Resume2Path</h4>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <p class="project-description">
+                                Machine learning-based resume analysis tool that suggests career paths based on skills and experience.
+                            </p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> Python, Machine Learning, NLP, Data Analysis
+                            </div>
+                            <div class="project-link">
+                                <a href="https://github.com/pvu06/Resume2path" target="_blank">
+                                    <i class="fab fa-github"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience (Placeholder for future) -->
+                    <div class="resume-section-item">
+                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                        <div class="experience-placeholder">
+                            <p>Seeking internship opportunities to gain hands-on experience in software development and technology.</p>
+                            <div class="internship-seeking">
+                                <h4>Open to Internship Opportunities In:</h4>
+                                <ul>
+                                    <li>Software Development</li>
+                                    <li>Data Science & Analytics</li>
+                                    <li>Web Development</li>
+                                    <li>Machine Learning & AI</li>
+                                    <li>Software Engineering</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Note for customization -->
+                    <div class="customization-note">
+                        <h3>📝 Customization Note</h3>
+                        <p>
+                            <strong>For Future Updates:</strong> This resume preview can be easily customized. 
+                            Replace placeholder content with your actual information, add more projects, 
+                            include relevant coursework, and update contact information as needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/pvu06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/phongvu06" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p class="footer-copyright">© 2025 Phong Vu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

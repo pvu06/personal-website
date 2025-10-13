@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Phong Vu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Phong Vu</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="dark-mode-icon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">I'd love to hear from you! Let's connect and discuss opportunities.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Let's Connect!</h2>
+                        <p>
+                            I'm always excited to connect with fellow developers, potential employers, 
+                            and anyone interested in technology. Whether you have an internship opportunity, 
+                            want to collaborate on a project, or just want to chat about tech, I'd love to hear from you!
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>Best way to reach me for professional inquiries</p>
+                                    <!-- TODO: Replace with your actual email -->
+                                    <a href="mailto:your-email@example.com" class="contact-link">
+                                        your-email@example.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>GitHub</h3>
+                                    <p>Check out my projects and contributions</p>
+                                    <a href="https://github.com/pvu06" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                        github.com/pvu06
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>LinkedIn</h3>
+                                    <p>Connect with me professionally</p>
+                                    <a href="https://www.linkedin.com/in/phongvu06" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                        linkedin.com/in/phongvu06
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response Time -->
+                        <div class="response-info">
+                            <h3><i class="fas fa-clock"></i> Response Time</h3>
+                            <p>
+                                I typically respond to emails within 24 hours. For urgent matters, 
+                                feel free to reach out via LinkedIn messaging.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2>Send Me a Message</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a subject</option>
+                                    <option value="internship">Internship Opportunity</option>
+                                    <option value="collaboration">Project Collaboration</option>
+                                    <option value="question">General Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your opportunity, question, or just say hello!"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                            
+                            <p class="form-note">
+                                <small>
+                                    <i class="fas fa-info-circle"></i>
+                                    Note: This form currently shows a placeholder response. 
+                                    For actual functionality, you'll need to integrate with a form service 
+                                    like Formspree, Netlify Forms, or implement a backend solution.
+                                </small>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="additional-info">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Georgia State University<br>Atlanta, Georgia</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Availability</h3>
+                            <p>Open to internship opportunities<br>Summer 2025 & beyond</p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                            <p>Computer Science Student<br>Expected Graduation: 2027</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="contact-cta">
+                    <h2>Ready to Work Together?</h2>
+                    <p>
+                        I'm actively seeking internship opportunities in software development, 
+                        data science, and AI. If you're looking for a motivated, eager-to-learn 
+                        student to join your team, I'd love to discuss how I can contribute!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="resume.html" class="btn btn-primary">
+                            <i class="fas fa-file-alt"></i>
+                            View My Resume
+                        </a>
+                        <a href="projects.html" class="btn btn-secondary">
+                            <i class="fas fa-code"></i>
+                            See My Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/pvu06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/phongvu06" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p class="footer-copyright">© 2025 Phong Vu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
