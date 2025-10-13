@@ -586,6 +586,10 @@ body {
     margin-bottom: var(--spacing-3xl);
 }
 
+.resume-preview {
+    margin-top: var(--spacing-3xl);
+}
+
 .download-card {
     background: var(--surface-color);
     padding: var(--spacing-2xl);
