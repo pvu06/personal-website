@@ -486,12 +486,16 @@ body {
 
 .project-screenshot {
     width: 100%;
+    max-width: 500px;
     height: auto;
+    max-height: 300px;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
     box-shadow: 0 8px 25px var(--shadow-medium);
     transition: all var(--transition-normal);
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-screenshot:hover {
