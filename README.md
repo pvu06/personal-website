@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Website - Phong Vu
 
 A modern, responsive personal website built with HTML, CSS, and JavaScript. Perfect for showcasing your portfolio, projects, and professional information for internship applications.
@@ -286,3 +287,6 @@ Remember to:
 - Have fun showcasing your skills!
 
 For questions or improvements, feel free to reach out or contribute to the project.
+=======
+# personal-website
+>>>>>>> 0dc83c0b04ff73491aacb7cada659363926ca2ad
