@@ -484,6 +484,21 @@ body {
     position: relative;
 }
 
+.project-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    transition: all var(--transition-normal);
+    object-fit: cover;
+}
+
+.project-screenshot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-heavy);
+}
+
 .project-placeholder {
     width: 100%;
     height: 250px;
