@@ -108,16 +108,24 @@ class PersonalChatbot {
     }
 
     addWelcomeMessage() {
-        const welcomeMessage = this.createBotMessage(
-            "Hello! I'm here to help you learn about Phong Vu. You can ask me about:\n\n" +
-            "• His background and education\n" +
-            "• His projects (like Resume2Path)\n" +
-            "• His technical skills\n" +
-            "• His internship experience\n" +
-            "• His career goals\n\n" +
-            "What would you like to know?"
-        );
-        this.messagesContainer.appendChild(welcomeMessage);
+        // Create a more structured welcome message
+        const welcomeDiv = document.createElement('div');
+        welcomeDiv.className = 'chatbot-message bot chatbot-welcome-message';
+        
+        welcomeDiv.innerHTML = `
+            <div class="welcome-greeting">👋 Hi! I'm here to help you learn more about Phong Vu.</div>
+            <div class="welcome-subtitle">You can ask me about:</div>
+            <div class="welcome-topics">
+                <div class="welcome-topic">🎓 <strong>Background & education</strong></div>
+                <div class="welcome-topic">💻 <strong>Projects</strong> (like Resume2Path)</div>
+                <div class="welcome-topic">⚡ <strong>Technical skills</strong></div>
+                <div class="welcome-topic">🌟 <strong>Internship experience</strong></div>
+                <div class="welcome-topic">🚀 <strong>Career goals</strong></div>
+            </div>
+            <div class="welcome-question">What would you like to know?</div>
+        `;
+        
+        this.messagesContainer.appendChild(welcomeDiv);
     }
 
     sendMessage() {
