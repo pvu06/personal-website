@@ -705,6 +705,21 @@ body {
     gap: var(--spacing-sm);
 }
 
+.education-header h4 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    flex: 1;
+}
+
+.education-date {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 .education-degree {
     font-weight: 600;
     color: var(--text-primary);
