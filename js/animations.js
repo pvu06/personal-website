@@ -121,23 +121,18 @@ class WebsiteAnimations {
 
     // About page animations
     setupAboutAnimations() {
-        // Add scroll animations to paragraphs
-        document.querySelectorAll('.about-section p').forEach((p, index) => {
-            p.classList.add('scroll-animate');
-            p.style.animationDelay = `${index * 0.1}s`;
-        });
+        // Simple fade-in for page header
+        const pageHeader = document.querySelector('.page-header');
+        if (pageHeader) {
+            pageHeader.classList.add('animate-fade-in-up');
+        }
 
-        // Add bounce animation to icons
-        document.querySelectorAll('.interest-card i, .goal-card i').forEach((icon, index) => {
-            icon.classList.add('scroll-animate');
-            icon.style.animationDelay = `${index * 0.1}s`;
+        // Simple fade-in for sections with delays
+        const sections = document.querySelectorAll('.about-section, .interests-section, .internship-goals');
+        sections.forEach((section, index) => {
+            section.classList.add('animate-fade-in-up');
+            section.style.animationDelay = `${(index + 1) * 0.2}s`;
         });
-
-        // Add scroll animations to sections
-        this.addScrollAnimation('.page-header', 'fadeInUp');
-        this.addScrollAnimation('.about-intro', 'fadeInUp');
-        this.addScrollAnimation('.interests-section', 'fadeInUp');
-        this.addScrollAnimation('.internship-goals', 'fadeInUp');
     }
 
     // Resume page animations
@@ -148,19 +143,28 @@ class WebsiteAnimations {
             resumePreview.classList.add('animate-fade-in');
         }
 
-        // Add scroll animations to sections
-        this.addScrollAnimation('.page-header', 'fadeInUp');
-        this.addScrollAnimation('.resume-download', 'fadeInUp');
-        this.addScrollAnimation('.resume-section-item', 'fadeInUp');
+        // Simple fade-in for sections with delays
+        const sections = document.querySelectorAll('.resume-download, .resume-section-item');
+        sections.forEach((section, index) => {
+            section.classList.add('animate-fade-in-up');
+            section.style.animationDelay = `${(index + 1) * 0.2}s`;
+        });
     }
 
     // Contact page animations
     setupContactAnimations() {
-        // Add scroll animations to contact elements
-        this.addScrollAnimation('.page-header', 'fadeInUp');
-        this.addScrollAnimation('.contact-form', 'fadeInLeft');
-        this.addScrollAnimation('.contact-info', 'fadeInRight');
-        this.addScrollAnimation('.info-card', 'fadeInUp');
+        // Simple fade-in for page header
+        const pageHeader = document.querySelector('.page-header');
+        if (pageHeader) {
+            pageHeader.classList.add('animate-fade-in-up');
+        }
+
+        // Simple fade-in for contact sections with delays
+        const sections = document.querySelectorAll('.contact-form, .contact-info, .additional-info');
+        sections.forEach((section, index) => {
+            section.classList.add('animate-fade-in-up');
+            section.style.animationDelay = `${(index + 1) * 0.2}s`;
+        });
     }
 
     // Add scroll animation to elements
