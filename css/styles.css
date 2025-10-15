@@ -714,7 +714,7 @@ body {
 }
 
 .education-date {
-    color: var(--text-muted);
+    color: var(--text-primary);
     font-size: var(--font-size-sm);
     font-weight: 500;
     white-space: nowrap;
@@ -837,7 +837,7 @@ body {
 
 .experience-location {
     margin: 0 0 var(--spacing-md) 0;
-    color: var(--text-muted);
+    color: var(--text-primary);
     font-style: italic;
     font-size: var(--font-size-sm);
     text-align: right;
