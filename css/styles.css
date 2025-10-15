@@ -1844,6 +1844,16 @@ body {
     transform: translateY(0);
 }
 
+/* Ensure animation classes don't interfere with transitions */
+.animate-fade-in-up,
+.animate-fade-in-left,
+.animate-fade-in-right,
+.animate-fade-in,
+.animate-scale-in,
+.animate-bounce-in {
+    transition: none !important;
+}
+
 /* Hover animations */
 .hover-lift {
     transition: all 0.3s ease;
@@ -1870,8 +1880,10 @@ body {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
-/* Smooth transitions for dark mode */
-* {
+/* Smooth transitions for dark mode - more specific selectors */
+body, .navbar, .main-content, .footer,
+.card, .btn, .link-card, .project-card,
+.resume-section-item, .info-card {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
