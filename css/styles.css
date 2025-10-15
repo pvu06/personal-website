@@ -822,7 +822,7 @@ body {
 }
 
 .experience-date {
-    color: var(--text-muted);
+    color: var(--text-primary);
     font-size: var(--font-size-sm);
     font-weight: 500;
     white-space: nowrap;
