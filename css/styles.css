@@ -9,11 +9,14 @@
 }
 
 :root {
-    /* Light Mode Colors */
-    --primary-color: #3b82f6;
-    --primary-hover: #2563eb;
-    --secondary-color: #64748b;
-    --accent-color: #f59e0b;
+    /* Blue + Orange/Coral Color Scheme */
+    --primary-color: #2563eb;           /* Blue-600 */
+    --primary-hover: #1d4ed8;           /* Blue-700 */
+    --primary-light: #3b82f6;           /* Blue-500 */
+    --secondary-color: #f97316;         /* Orange-500 */
+    --secondary-hover: #ea580c;         /* Orange-600 */
+    --accent-color: #ff6b6b;            /* Coral */
+    --accent-hover: #ff5252;            /* Coral hover */
     --background-color: #ffffff;
     --surface-color: #f8fafc;
     --text-primary: #1e293b;
@@ -59,10 +62,14 @@
 
 /* Dark Mode Colors */
 [data-theme="dark"] {
-    --primary-color: #60a5fa;
-    --primary-hover: #3b82f6;
-    --secondary-color: #94a3b8;
-    --accent-color: #fbbf24;
+    /* Dark Mode Blue + Orange/Coral */
+    --primary-color: #60a5fa;           /* Blue-400 for dark mode */
+    --primary-hover: #3b82f6;            /* Blue-500 for dark mode */
+    --primary-light: #93c5fd;            /* Blue-300 for dark mode */
+    --secondary-color: #fb923c;           /* Orange-400 for dark mode */
+    --secondary-hover: #f97316;           /* Orange-500 for dark mode */
+    --accent-color: #ff8a80;             /* Coral-300 for dark mode */
+    --accent-hover: #ff6b6b;             /* Coral-400 for dark mode */
     --background-color: #0f172a;
     --surface-color: #1e293b;
     --text-primary: #f1f5f9;
@@ -87,6 +94,29 @@ body {
     background-color: var(--background-color);
     transition: background-color var(--transition-normal), color var(--transition-normal);
     overflow-x: hidden;
+}
+
+/* ========================================
+   LINK & ICON STYLES
+   ======================================== */
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Icon hover effects */
+i {
+    transition: color 0.3s ease;
+}
+
+.hover-glow:hover i {
+    color: var(--accent-color);
 }
 
 /* ========================================
@@ -215,6 +245,10 @@ body {
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .page-subtitle {
@@ -337,24 +371,27 @@ body {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
     color: white;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-hover));
+    color: white;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
-    color: white;
+    background: linear-gradient(135deg, var(--secondary-hover), var(--secondary-color));
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 /* ========================================
@@ -372,6 +409,23 @@ body {
     text-align: center;
     margin-bottom: var(--spacing-2xl);
     color: var(--text-primary);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
 }
 
 .links-grid {
@@ -386,21 +440,44 @@ body {
     border-radius: var(--radius-lg);
     text-decoration: none;
     color: var(--text-primary);
-    transition: all var(--transition-normal);
-    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px var(--shadow-medium);
-    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+    border-color: var(--accent-color);
+}
+
+.link-card:hover::before {
+    transform: scaleX(1);
 }
 
 .link-card i {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: var(--spacing-md);
+    transition: color 0.3s ease;
+}
+
+.link-card:hover i {
+    color: var(--accent-color);
 }
 
 .link-card h3 {
@@ -427,12 +504,32 @@ body {
     border-radius: var(--radius-xl);
     padding: var(--spacing-2xl);
     margin-bottom: var(--spacing-2xl);
-    border: 1px solid var(--border-color);
-    transition: all var(--transition-normal);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    box-shadow: 0 10px 30px var(--shadow-medium);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
 }
 
 .project-header {
@@ -1319,20 +1416,44 @@ body {
     background: var(--surface-color);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     text-align: center;
-    transition: all var(--transition-normal);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .info-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px var(--shadow-medium);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+    border-color: var(--accent-color);
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
 }
 
 .info-card i {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: var(--spacing-md);
+    transition: color 0.3s ease;
+}
+
+.info-card:hover i {
+    color: var(--accent-color);
 }
 
 .info-card h3 {
@@ -1384,10 +1505,11 @@ body {
    ======================================== */
 
 .footer {
-    background: var(--surface-color);
+    background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
     border-top: 1px solid var(--border-color);
     padding: var(--spacing-xl) 0;
     margin-top: auto;
+    color: white;
 }
 
 .footer-container {
@@ -1415,22 +1537,24 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 50%;
     text-decoration: none;
-    transition: all var(--transition-fast);
+    transition: all 0.3s ease;
     font-size: var(--font-size-lg);
+    border: 2px solid transparent;
 }
 
 .footer-links a:hover {
-    background: var(--primary-hover);
+    background: var(--accent-color);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-copyright {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     font-size: var(--font-size-sm);
 }
 
